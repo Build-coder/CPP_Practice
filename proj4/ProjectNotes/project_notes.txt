@@ -1,0 +1,70 @@
+Cipher.h / Cipher.cpp
+
+- This class is the parent class for each of the ciphers. 
+- It holds a message (the piece of data that will be encrypted and decrypted)
+- It also holds a bool indicating if the message is currently encrypted
+- m_vars: string m_message, bool m_isEncrypted
+
+CipherTool.h / CipherTool.cpp
+
+- Longest and most complicated of the classes
+- Manages the entire process
+- Allows the user to display all ciphers
+- Allows the user to encrypt / decrypt all ciphers
+- Allows the user to export all ciphers
+- Ciphers can be of different types 
+- Ciphers are all stored in m_ciphers
+- m_vars: vector<Cipher*> m_ciphers, string m_filename
+
+Caesar.h / Caesar.cpp
+
+- creates object (Caesar encrypted or decrypted) message
+- m_shift: how many chars the cipher shifts the characters
+- m_vars: int m_shift
+
+Vigenere.h / Vigenere.cpp
+
+- creates object (Vigenere encrypted or decrypted) message
+- m_key: used to encrypt / decrypt
+
+Ong.h / Ong.cpp
+
+- creates object (Ong encrypted or decrypted) message
+______________________________________________________________
+
+// Inheritance
+Parent Class: Cipher.h / .cpp
+Child Classes: Caesar.h /.cpp, Vigenere.h / .cpp, Ong.h / .cpp
+
+// Polymorphism
+
+
+// Aggregation
+Singular Class: Cipher.h / .cpp
+Plural Class: CipherTool.h / .cpp
+
+
+Exporting using CipherTool
+
+- ability for users to export ciphers to new file
+- if desired, exported files can be imported and decrypted 
+- must open, write to, and then close a file
+- FormatOutput in each class formats a stringStream
+- stringStream is returned as a single string
+- must be done in subclass b/c m_vars are private
+
+Sample Input / Output 
+
+- Cipher Type: c = Cipher, v = Vigenere, o = Ong
+- Delimiter: |
+
+- input files have several parts:
+
+- first part: indicates the cipher type 
+- second part: indicates if message is encrypted or not
+- third part: message itself
+- fourth part: c: number of shifts, v: keyword, o: nada
+
+
+
+

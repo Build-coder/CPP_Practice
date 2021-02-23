@@ -1,0 +1,23 @@
+// Inheritance
+
+class ParentClass{
+
+    public:
+            ParentClass()
+            Getters()/Setters()
+
+    private:
+            m_vars_parent
+};
+
+class ChildClass : public ParentClass{
+
+    public:
+            ChildClass() : ParentClass(m_vars_parent)
+            Getters()/Setters()
+    private:
+            m_vars_child
+};
+____________________________________________________________________
+
+    

@@ -1,0 +1,23 @@
+// Aggregation 
+
+class Singular{
+
+    public:
+            Singular()
+            Getters()/Setters()
+
+    private:
+            m_vars
+}
+
+class Plural{
+
+    public:
+            Add(Singular* singularPtr)
+                m_vector.pushback(singularPtr)
+    
+    friend ostream...
+
+    private:
+            vector<Singular*>m_vector
+}

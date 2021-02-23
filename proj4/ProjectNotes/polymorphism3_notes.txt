@@ -1,0 +1,19 @@
+// Polymorphism 3
+
+class Parent{
+
+    public:
+            Parent()
+            Getters()/Setters()
+            virtual dataType Func(){//}
+
+    protected:
+            m_vars
+};
+
+class Child : public Parent{
+
+    public:
+            Child() : Parent()
+            virtual dataType Func {//do something different}
+}

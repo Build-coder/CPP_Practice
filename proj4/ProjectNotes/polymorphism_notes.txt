@@ -1,0 +1,23 @@
+// Polymorphism
+
+class Parent{
+    
+    public:
+            Getters()/Setters()
+            virtual Func(){return 0;}
+
+    protected:
+            m_vars_parent
+};
+
+class Child : public Parent{
+
+    public:
+            virtual Func(){return m_vars_parent;}
+}
+
+class Child2 : public Parent{
+    
+    public:
+            virtual Func(){return m_vars_parent;}
+}

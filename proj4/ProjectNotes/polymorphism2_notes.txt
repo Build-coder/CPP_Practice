@@ -1,0 +1,28 @@
+// Polymorphism 2
+
+// notice there are no member variables
+// notice keyword 'virtual' isn't used outside of public class
+
+class Parent{
+
+    public:
+            virtual dataType Func1() {//}
+            virtual dataType Func2() {//}
+            virtual dataType Func3() {}
+};
+
+class Child1 : public Parent{
+
+    public:
+            dataType Func1(){//do something different}
+            dataType Func2(){//do something different}
+            dataType Func3(){//do something different}
+};
+
+class Child2 : public Parent{
+
+    public:
+            dataType Func1(){//do something different}
+            dataType Func2(){//do something different}
+            dataType Func3(){}
+};
